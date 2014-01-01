@@ -97,6 +97,10 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
+html, body {
+    height: 100%;
+}
+
 body {
     font-family: "Open Sans", sans-serif;
     font-weight: 300;
@@ -110,6 +114,43 @@ h1 {
     font-family: 'Merriweather Sans', sans-serif;
 }
 
+section.home {
+    display: none;
+}
+
+body.home section.home {
+    display: block;
+}
+
+section.home {
+    position: relative;
+    transition: margin-top 1s;
+    background-color: white;
+    width: 100%;
+    height: calc(100% - 130px - 50px);
+    margin-top: 130px;
+}
+
+section.about {
+    height: 100%;
+    background-color: white;
+}
+
+section.home header {
+    position: absolute;
+    right: 5%;
+    top: 25%;
+}
+
+.home-background {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 150px;
+    background: url('../img/home_head_bg.jpg') no-repeat top center;
+    z-index: -1;
+}
+
 h1 span.firstname {
     font-weight: 300;
     text-transform: uppercase;
@@ -121,19 +162,75 @@ h1 span.lastname {
 }
 
 nav {
-    font-family: "Spinnaker", sans-serif;
+    font-family: "Open Sans", sans-serif;
     color: #787878;
     text-transform: uppercase;
+    margin: 0;
+    padding: 0;
+    height: 50px;
+    background-color: white;
+}
+
+nav ul {
+    margin: 0;
+    line-height: 50px;
+}
+
+
+section.home {
+    text-align: right;
+}
+
+section.home a {
+    color: inherit;
+    text-decoration: inherit;
+}
+
+section.home a:hover {
+}
+
+section.description .current {
+    margin: 3px;
+}
+
+section.description .previous {
+    color: gray;
+    overflow: hidden;
+    max-height: 1000px;
+    transition-property: max-height, opacity;
+    transition-duration: 0.5s, 0.5s;
+    transition-delay: 0s, 0.5s;
+}
+
+section.description .previous p {
+    margin: 0;
+    line-height: 24px;
+}
+
+section.description .previous.collapsed {
+    max-height: 0;
+    opacity: 0;
+    transition-property: opacity, max-height;
+    transition-duration: 0.5s, 0.5s;
+    transition-delay: 0s, 0.5s;
+}
+
+nav {
+    width: 100%;
+    text-align: center;
 }
 
 nav ul li {
     display: inline-block;
     font-size: 18px;
+    margin-left: 20px;
+    margin-right: 20px;
 }
 
 
 section.home h1 {
-    font-size: 56px;
+    font-size: 48px;
+    margin: 0.1em;
 }
 
 
