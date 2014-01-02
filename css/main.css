@@ -131,11 +131,6 @@ section.home {
     margin-top: 130px;
 }
 
-section.about {
-    height: 100%;
-    background-color: white;
-}
-
 section.home header {
     position: absolute;
     right: 5%;
@@ -143,12 +138,17 @@ section.home header {
 }
 
 .home-background {
+    display: none;
     position: fixed;
     top: 0;
     width: 100%;
     height: 150px;
     background: url('../img/home_head_bg.jpg') no-repeat top center;
     z-index: -1;
+}
+
+body.home .home-background {
+    display: inherit;
 }
 
 h1 span.firstname {
@@ -162,6 +162,8 @@ h1 span.lastname {
 }
 
 nav {
+    position: fixed;
+    top: 0;
     font-family: "Open Sans", sans-serif;
     color: #787878;
     text-transform: uppercase;
@@ -169,6 +171,10 @@ nav {
     padding: 0;
     height: 50px;
     background-color: white;
+}
+
+body.home nav {
+    position: inherit;
 }
 
 nav ul {
@@ -218,6 +224,7 @@ section.description .previous.collapsed {
 nav {
     width: 100%;
     text-align: center;
+    background-color: white;
 }
 
 nav ul li {
@@ -227,6 +234,16 @@ nav ul li {
     margin-right: 20px;
 }
 
+nav ul li a {
+    color: inherit;
+    text-decoration: inherit;
+}
+
+nav ul li a:visited {
+    color: inherit;
+    text-decoration: inherit;
+}
+
 
 section.home h1 {
     font-size: 48px;
@@ -234,7 +251,45 @@ section.home h1 {
 }
 
 
+section.social-networks {
+    margin-top: 10px;
+    margin-right: 1px;
+}
 
+article {
+    background-color: white;
+    overflow-x: hidden;
+    white-space: nowrap;
+    min-height: calc(100% - 50px);
+    margin-top: 50px;
+}
+
+
+body.home article {
+    margin-top: 0;
+}
+
+article section {
+    display: none;
+    background-color: white;
+    vertical-align: top;
+    width: 100%;
+    transition: margin 0.7s;
+}
+
+article section.current {
+    display: inline-block;
+}
+
+article section > h1 {
+    margin: 0;
+}
+
+
+
+article section.left {
+    margin-left: -100%;
+}
 
 
 

@@ -40,24 +40,101 @@
         </section>
         <section class="social-networks">
             <a href="http://www.facebook.com/zhujingsi"><img src="img/social_media/facebook.png" alt="Facebook" width="24" height="24" /></a>
+            <a href="http://www.linkedin.com/in/zhujingsi"><img src="img/social_media/linkedin.png" alt="LinkedIn" width="24" height="24" /></a>
+            <a href="http://www.renren.com/265165926"><img src="img/social_media/renren.png" alt="RenRen" width="24" height="24" /></a>
             <a href="http://www.github.com/HeavenFox"><img src="img/social_media/github.png" alt="Github" width="24" height="24" /></a>
         </section>
         </header>
         </section>
         <nav>
             <ul>
-                <li><a href="#" onclick="turnToSection('about')">ABOUT</a></li>
-                <li>PORTFOLIO</li>
-                <li>BLOG</li>
-                <li>CONTACT</li>
+                <li><a href="#about" onclick="turnToSection('about'); return false;">ABOUT</a></li>
+                <li><a href="#portfolio" onclick="turnToSection('portfolio'); return false;">PORTFOLIO</a></li>
+                <li><a href="#blog" onclick="turnToSection('blog'); return false;">BLOG</a></li>
+                <li><a href="#contact" onclick="turnToSection('contact'); return false;">CONTACT</a></li>
             </ul>
         </nav>
+        <article>
 
-        <section class="about">
-            About Me
-        </section>
-        <section class="contact">
+        <section id="about">
+            <h1>About Me</h1>
+            <h2>For the Bullet-Point Oriented</h2>
+            <h2>Employments, today and tomorrow</h2>
+            <ul>
+                <li>
+                    <p class="company">Facebook</p>
+                    <p class="position">Software Engineer Intern</p>
+                    <p class="footnotes">London, UK. 2014.9 - 2014.12</p>
+                </li>
+                <li>
+                    <p class="company">Dropbox</p>
+                    <p class="position">Software Engineer Intern</p>
+                    <p class="trivia"></p>
+                    <p class="footnotes">San Francisco, CA. 2014.5 - 2014.8</p>
+                </li>
+                <li>
+                    <p class="company">Google</p>
+                    <p class="position">Software Engineer Intern, Analytics</p>
+                    <p class="footnotes">Mountain View, CA. 2014.2 - 2014.5</p>
+                </li>
+                <li>
+                    <p class="company">Instagram</p>
+                    <p class="position">Software Engineer Intern, Infrastructure</p>
+                    <p class="footnotes">Menlo Park, CA. 2013.5 - 2013.8</p>
+                </li>
+            </ul>
+
+            <h2>Freelance Work</h2>
+            <ul>
+                <li>
+                    <p class="company">IPBChina.com (易维论坛)</p>
+                    <p class="position">Co-founder &amp; President</p>
+                    <p class="footnotes">2014.2 - 2014.5</p>
+                </li>
+                <li>
+                    <p class="company">Yumeng.org (爱梦之嘉)</p>
+                    <p class="position">Designer, Front-end Developer</p>
+                    <p class="footnotes">Menlo Park, CA. 2013.5 - 2013.8</p>
+                </li>
+                <li>
+                    <p class="company">FireIPB.uni.cc</p>
+                    <p class="position">Developer</p>
+                    <p class="footnotes">Menlo Park, CA. 2013.5 - 2013.8</p>
+                </li>
+            </ul>
+        </section><section id="portfolio">
+            <h1>Portfolio</h1>
+            <h2>Projects</h2>
+            <ul>
+                <li>
+                <h3>OIOJ Online Judge System</h3>
+                <p class="tech">Technologies: PHP, MySQL, HTML/JS/CSS, C++</p>
+                </li>
+                <li>
+                <h3>PrivateLog</h3>
+                <p class="tech">Technologies: PHP, MySQL, HTML/JS/CSS</p>
+                </li>
+                <li>
+                <h3>IceAge</h3>
+                <p class="tech">Technologies: Java</p>
+                </li>
+            </ul>
+            <h2>Scripts</h2>
+            <ul>
+                <li>Airbnb Sort by Price</li>
+                <li>ID3 Encoding Converter</li>
+            </ul>
+            <h2>Open Source Contribution</h2>
+            <ul>
+                <li>Apache Cassandra Project</li>
+            </ul>
+
+        </section><section id="blog">
+        <h1>Blog</h1>
+        </section><section id="contact">
             <h1>Contact</h1>
+            <h2>Availability</h2>
+            <small>View Full Calendar in: <a href="https://www.google.com/calendar/embed?src=heavenfox%40gmail.com&ctz=America/Los_Angeles">San Francisco</a> - <a href="https://www.google.com/calendar/embed?src=heavenfox%40gmail.com&ctz=America/New_York">New York</a> - <a href="https://www.google.com/calendar/embed?src=heavenfox%40gmail.com&ctz=Europe/London">London</a> - <a href="https://www.google.com/calendar/embed?src=heavenfox%40gmail.com&ctz=Asia/Shanghai">Beijing</a></small>
             <h2>Best ways to contact me</h2>
             <p>Email</p>
             <p>Facebook Messenger</p>
@@ -68,9 +145,11 @@
             <p>Google Hangouts</p>
             <p>QQ</p>
         </section>
+        </article>
 
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
+        <script>document.write('<script src="js/vendor/jquery.mousewheel.js"><\/script>')</script>
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
 
