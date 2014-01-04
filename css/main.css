@@ -110,8 +110,13 @@ body.home {
     overflow: hidden;
 }
 
-h1 {
+section.home h1 {
     font-family: 'Merriweather Sans', sans-serif;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Arvo', sans-serif;
+    font-weight: 400;
 }
 
 section.home {
