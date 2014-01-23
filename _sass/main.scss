@@ -1,10 +1,10 @@
 /*! HTML5 Boilerplate v4.3.0 | MIT License | http://h5bp.com/ */
 
-/*
- * What follows is the result of much research on cross-browser styling.
- * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
- * Kroc Camen, and the H5BP dev community and team.
- */
+@mixin calc($property, $expression) {
+  #{$property}: -moz-calc(#{$expression});
+  #{$property}: -webkit-calc(#{$expression});
+  #{$property}: calc(#{$expression});
+}
 
 /* ==========================================================================
    Base styles: opinionated defaults
@@ -126,14 +126,12 @@ body.home {
 }
 
 $home-bg-height: 130px;
-$home_bg_height: 130px;
 $main-nav-height: 50px;
-
 
 section.home {
     position: relative;
     width: 100%;
-    height: calc(100% - 130px - 50px);
+    @include calc(height, 100% - #{$home-bg-height} - #{$main-nav-height});
     margin-top: $home-bg-height;
 
     text-align: right;
@@ -227,6 +225,8 @@ nav {
     margin: 0;
     padding: 0;
 
+    border-bottom: 1px solid #c3c3c3;
+
     color: #787878;
     text-transform: uppercase;
     background-color: white;
@@ -265,6 +265,7 @@ body.home nav {
 
 
 /* Content */
+$article_margin_top: 25px;
 
 h1 {
     font-family: 'Arvo', sans-serif;
@@ -281,8 +282,8 @@ article {
     background-color: white;
     overflow-x: hidden;
     white-space: nowrap;
-    min-height: calc(100% - 50px);
-    margin-top: $main-nav-height;
+    @include calc(min-height, 100% - #{$main-nav-height});
+    margin-top: ($main-nav-height);
 }
 
 
@@ -294,6 +295,7 @@ article section {
     display: none;
     width: 100%;
     vertical-align: top;
+    margin-top: $article_margin_top;
 
     background-color: white;
     white-space: normal;
