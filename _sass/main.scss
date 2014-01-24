@@ -233,6 +233,8 @@ nav {
     text-align: center;
     background-color: white;
 
+    transition: top 0.4s;
+
     ul {
         margin: 0;
         line-height: 50px;
@@ -256,6 +258,10 @@ nav {
 
     }
 
+}
+
+nav.fadeaway {
+    top: - $main-nav-height;
 }
 
 body.home nav {
@@ -284,6 +290,8 @@ article {
     white-space: nowrap;
     @include calc(min-height, 100% - #{$main-nav-height});
     margin-top: ($main-nav-height);
+
+    transition: opacity 0.4s;
 }
 
 
@@ -333,6 +341,10 @@ article section.current {
 
 article section.left {
     margin-left: -100%;
+}
+
+article.fadeaway {
+    opacity: 0;
 }
 
 
