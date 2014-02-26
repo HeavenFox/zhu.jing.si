@@ -34,9 +34,9 @@
                     $('#' + sec).addClass('left')
                                 .addClass('current')
                                 .onceTransitionEnd(function(e) {$('#' + currentSection).removeClass('current');transitionComplete = true;});
-                    window.setTimeout(function(){
+                    window.requestAnimationFrame(function(){
                         $('#' + sec).removeClass('left');
-                    }, 1);
+                    });
 
                 }
             }
