@@ -119,7 +119,7 @@
 
         if (currentSectionId === 0) {
             // In case the page is pre-scrolled, e.g. after a refresh
-            $(window).scrollTop();
+            $(window).scrollTop(0);
         } else {
             turnToSection(sections[currentSectionId], false);
         }
