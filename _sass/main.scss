@@ -232,6 +232,9 @@ nav {
     background-color: white;
     text-align: center;
     background-color: white;
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
 
     transition: top 0.4s;
 
@@ -313,6 +316,11 @@ article section {
     > .page {
         width: 960px;
         margin: 0 auto 0 auto;
+
+        @media screen and (max-width: 980px) {
+            width: auto;
+            margin: 0 10px 0 10px;
+        }
 
         > h1 {
             margin: 0;
