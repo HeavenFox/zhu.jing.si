@@ -16,7 +16,7 @@
     };
 
     function pushUrl(sec) {
-        window.history.pushState(null, "", "/" + sec + "/");
+        window.history.pushState(null, "", sec === "home" ? "/" : ("/" + sec + "/"));
     }
 
     function turnToSection(sec, animated) {
@@ -140,4 +140,20 @@
             turnToSection(sections[newSection], true);
         }
     };
+
+    $('body').mousewheel(function(event) {
+        var target;
+        if (currentSectionId === 0 && event.deltaY < -25) {
+            target = sections[1];
+        } else if (currentSectionId > 0 && event.deltaY > 50 && $(window).scrollTop() < 0) {
+            target = sections[0];
+            window.requestAnimationFrame(function(){
+                $(window).scrollTop(0);
+            });
+        } else {
+            return;
+        }
+        turnToSection(target, true);
+        pushUrl(target);
+    });
 })(jQuery, window);
