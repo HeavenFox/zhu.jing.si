@@ -137,7 +137,7 @@
     window.onpopstate = function() {
         var newSection = sectionIdFromUrl();
         if (newSection !== currentSectionId) {
-            turnToSection(sections[newSection]);
+            turnToSection(sections[newSection], true);
         }
-    }
+    };
 })(jQuery, window);
