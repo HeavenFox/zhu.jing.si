@@ -215,6 +215,14 @@ section.home {
     z-index: -1;
 
     background: url('../img/home_head_bg.jpg') no-repeat top center;
+
+    @media print,
+           (-o-min-device-pixel-ratio: 5/4),
+           (-webkit-min-device-pixel-ratio: 1.25),
+           (min-resolution: 120dpi) {
+        background-image: url('../img/home_head_bg@2x.jpg');
+        background-size: auto 150px;
+    }
 }
 
 nav {
@@ -471,12 +479,6 @@ article.fadeaway {
     /* Style adjustments for viewports that meet the condition */
 }
 
-@media print,
-       (-o-min-device-pixel-ratio: 5/4),
-       (-webkit-min-device-pixel-ratio: 1.25),
-       (min-resolution: 120dpi) {
-    /* Style adjustments for high resolution devices */
-}
 
 /* ==========================================================================
    Print styles.
