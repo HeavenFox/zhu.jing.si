@@ -99,6 +99,7 @@ textarea {
 
 html, body {
     height: 100%;
+    position: relative;
 }
 
 body {
@@ -364,6 +365,14 @@ article.fadeaway {
 }
 
 
+span.tech {
+    color: #555;
+    font-size: 0.8em;
+    display: inline-block;
+    padding: 3px;
+    border: 1px solid #555;
+    border-radius: 2px;
+}
 
 
 
