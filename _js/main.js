@@ -1,3 +1,15 @@
+if (!String.prototype.startsWith) {
+  Object.defineProperty(String.prototype, 'startsWith', {
+    enumerable: false,
+    configurable: false,
+    writable: false,
+    value: function(searchString, position) {
+      position = position || 0;
+      return this.lastIndexOf(searchString, position) === position;
+    }
+  });
+}
+
 (function($, window) {
     "use strict";
     /**
@@ -90,7 +102,7 @@
         $('nav ul li a').each(function(id, link) {
             $(link).click(function(e){
                 var target = $(this).data('target');
-                if (target[0] === '/') {
+                if (target[0] === '/' || target.startsWith('http')) {
                     turnToUrl(target);
                 } else {
                     turnToSection(target, true);
