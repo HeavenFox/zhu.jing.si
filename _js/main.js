@@ -72,6 +72,8 @@ if (!String.prototype.startsWith) {
             }
         }
         currentSectionId = secId;
+
+        return true;
     }
 
     function turnToUrl(url) {
@@ -101,14 +103,15 @@ if (!String.prototype.startsWith) {
     function linkSections() {
         $('nav ul li a').each(function(id, link) {
             $(link).click(function(e){
+                e.preventDefault();
                 var target = $(this).data('target');
                 if (target[0] === '/' || target.startsWith('http')) {
                     turnToUrl(target);
                 } else {
-                    turnToSection(target, true);
-                    pushUrl(target);
+                    if (turnToSection(target, true)) {
+                        pushUrl(target);
+                    }
                 }
-                e.preventDefault();
             });
         });
     }
@@ -158,6 +161,7 @@ if (!String.prototype.startsWith) {
         if (currentSectionId === 0 && event.deltaY < -25) {
             target = sections[1];
         } else if (currentSectionId > 0 && event.deltaY > 50 && $(window).scrollTop() < 0) {
+            console.log("cool");
             target = sections[0];
             window.requestAnimationFrame(function(){
                 $(window).scrollTop(0);

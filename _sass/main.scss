@@ -1,11 +1,5 @@
 /*! HTML5 Boilerplate v4.3.0 | MIT License | http://h5bp.com/ */
 
-@mixin calc($property, $expression) {
-  #{$property}: -moz-calc(#{$expression});
-  #{$property}: -webkit-calc(#{$expression});
-  #{$property}: calc(#{$expression});
-}
-
 /* ==========================================================================
    Base styles: opinionated defaults
    ========================================================================== */
@@ -132,7 +126,7 @@ $main-nav-height: 50px;
 section.home {
     position: relative;
     width: 100%;
-    @include calc(height, 100% - #{$home-bg-height} - #{$main-nav-height});
+    height: calc(100% - #{$home-bg-height} - #{$main-nav-height});
     margin-top: $home-bg-height;
 
     text-align: right;
@@ -300,7 +294,7 @@ article {
     background-color: white;
     overflow-x: hidden;
     white-space: nowrap;
-    @include calc(min-height, 100% - #{$main-nav-height});
+    min-height: calc(100% - #{$main-nav-height});
     margin-top: ($main-nav-height);
 
     transition: opacity 0.4s;
@@ -365,6 +359,10 @@ article.fadeaway {
 }
 
 
+/* =======================
+   Portfolio
+   ======================= */
+
 span.tech {
     color: #555;
     font-size: 0.8em;
@@ -372,6 +370,26 @@ span.tech {
     padding: 3px;
     border: 1px solid #555;
     border-radius: 2px;
+}
+
+#portfolio h3 {
+    margin-bottom: 0;
+
+    a {
+        color: black;
+        text-decoration: none;
+    }
+
+    .date {
+        font-weight: 300;
+        color: #333;
+    }
+}
+
+#portfolio .tagline {
+    margin-bottom: 12px;
+    font-size: 0.9em;
+    font-style: italic;
 }
 
 
